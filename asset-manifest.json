@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/anime-quiz/static/js/main.fd428466.chunk.js",
+    "main.js.map": "/anime-quiz/static/js/main.fd428466.chunk.js.map",
+    "runtime-main.js": "/anime-quiz/static/js/runtime-main.52d3cda7.js",
+    "runtime-main.js.map": "/anime-quiz/static/js/runtime-main.52d3cda7.js.map",
+    "static/js/2.8274bb11.chunk.js": "/anime-quiz/static/js/2.8274bb11.chunk.js",
+    "static/js/2.8274bb11.chunk.js.map": "/anime-quiz/static/js/2.8274bb11.chunk.js.map",
+    "index.html": "/anime-quiz/index.html",
+    "static/js/2.8274bb11.chunk.js.LICENSE.txt": "/anime-quiz/static/js/2.8274bb11.chunk.js.LICENSE.txt",
+    "static/media/bg.ec3c44af.jpg": "/anime-quiz/static/media/bg.ec3c44af.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52d3cda7.js",
+    "static/js/2.8274bb11.chunk.js",
+    "static/js/main.fd428466.chunk.js"
+  ]
+}

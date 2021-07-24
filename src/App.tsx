@@ -4,7 +4,7 @@ import QuestionCard from './components/QuestionCard';
 
 interface AppProps {}
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;

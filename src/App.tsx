@@ -19,13 +19,11 @@ const App: React.FC<AppProps> = ({}) => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
-  const [gameOver, setGamerOver] = useState(true);
-
-  console.log(questions);
+  const [gameOver, setGameOver] = useState(true);
 
   const startTrivia = async () => {
     setLoading(true);
-    setGamerOver(false);
+    setGameOver(false);
 
     const newQuestions = await fetchQuizQuestions(
       TOTAL_QUESTIONS,
@@ -61,7 +59,16 @@ const App: React.FC<AppProps> = ({}) => {
     }
   };
 
-  const nextQuestion = () => {};
+  const nextQuestion = () => {
+    //Move on to the next question if not the last question
+    const nextQuestion = questionNumber + 1;
+
+    if (nextQuestion === TOTAL_QUESTIONS) {
+      setGameOver(true);
+    } else {
+      setQuestionNumber(nextQuestion);
+    }
+  };
 
   const showNextButton =
     !gameOver &&

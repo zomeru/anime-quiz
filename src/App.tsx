@@ -16,7 +16,7 @@ const TOTAL_QUESTIONS = 10;
 const App: React.FC<AppProps> = ({}) => {
   const [loading, setLoading] = useState(false);
   const [questions, setQuestions] = useState<QuestionState[]>([]);
-  const [questionNumber, setQuestionNubmber] = useState(0);
+  const [questionNumber, setQuestionNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGamerOver] = useState(true);
@@ -35,11 +35,31 @@ const App: React.FC<AppProps> = ({}) => {
     setQuestions(newQuestions);
     setScore(0);
     setUserAnswers([]);
-    setQuestionNubmber(0);
+    setQuestionNumber(0);
     setLoading(false);
   };
 
-  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (!gameOver) {
+      //Users answer
+      const answer = e.currentTarget.value;
+
+      //Check answer against correct answer
+      const correct = questions[questionNumber].correct_answer === answer;
+
+      //Add score if answer is correct
+      if (correct) setScore(prevScore => prevScore + 1);
+
+      //Save answer in the array for user answers
+      const answerObject = {
+        question: questions[questionNumber].question,
+        answer,
+        correct,
+        correctAnswer: questions[questionNumber].correct_answer,
+      };
+      setUserAnswers(prevAnswer => [...prevAnswer, answerObject]);
+    }
+  };
 
   const nextQuestion = () => {};
 

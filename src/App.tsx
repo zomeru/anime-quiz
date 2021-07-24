@@ -84,7 +84,7 @@ const App: React.FC<AppProps> = ({}) => {
           Start
         </button>
       ) : null}
-      {!gameOver ? <p className='score'>Score:</p> : null}
+      {!gameOver ? <p className='score'>Score: {score}</p> : null}
       {loading ? <p>Loading Question...</p> : null}
       {!loading && !gameOver && (
         <QuestionCard

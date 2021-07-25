@@ -1,3 +1,3 @@
 # A simple anime quiz
 
-Made a quiz app for learning typescript purposes.
+Made a simple anime quiz app for learning typescript purposes.
